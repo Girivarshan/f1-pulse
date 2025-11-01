@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Pulse</title>
+    <!-- Tailwind CSS for rapid UI development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS styles for theme and animations -->
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0D0F12;
+        /* Add radial gradients for a subtle, dynamic background effect */
+        background-image: radial-gradient(circle at top left, rgba(255, 24, 1, 0.15), transparent 35%),
+                          radial-gradient(circle at bottom right, rgba(0, 245, 212, 0.1), transparent 35%);
+        background-attachment: fixed;
+      }
+      /* Custom glow effect for the main button */
+      .glow-shadow {
+        box-shadow: 0 0 20px rgba(255, 24, 1, 0.3);
+      }
+      .glow-shadow:hover {
+        box-shadow: 0 0 35px rgba(255, 24, 1, 0.5);
+      }
+       /* Custom glow effect for text elements */
+       .text-glow {
+        text-shadow: 0 0 8px rgba(0, 245, 212, 0.8);
+      }
+      /* Fade-in animation keyframes */
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+    
+    <!-- Import Map for managing ES module dependencies (React, Gemini SDK) from a CDN -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- The root container where the React application will be mounted -->
+    <div id="root"></div>
+    <!-- The main entry point for the application's JavaScript -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

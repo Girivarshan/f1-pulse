@@ -1,0 +1,5 @@
+{
+  "name": "F1 Pulse",
+  "description": "Your Race, Summarized in Seconds. Get AI-powered summaries, key topics, and sentiment analysis for any Formula 1 news article with Google Gemini.",
+  "requestFramePermissions": []
+}
